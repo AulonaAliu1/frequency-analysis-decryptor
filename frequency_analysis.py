@@ -1,8 +1,10 @@
 from collections import Counter
 
-cipher = input("Enter the encrypted text:\n")
+with open("encrypted.txt", "r", encoding="utf-8") as file:
+    cipher = file.read()
 
-english_freq = "etaoinshrdlcumwfgypbvkjxqz"
+
+english_freq = "etaoinshrldmucyfwgbpvkzjq"
 
 letters = [c.lower() for c in cipher if c.isalpha()]
 
